@@ -1,0 +1,41 @@
+.sidebar-container {
+  background: #f9f9f9;
+}
+
+.sidebar-content {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  color: white;
+  border-radius: 8px;
+}
+
+.menu-btn {
+    display: flex;
+    justify-content: start;
+}
+
+.sidebar-content h4,
+.sidebar-content label {
+  color: white;
+}
+
+.sidebar-content .form-check-label {
+  color: #f1f1f1;
+}
+
+@media (min-width: 992px) {
+  .sidebar-container {
+    width: 250px;
+    min-height: 100vh;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sidebar-container {
+    width: 100%;
+  }
+  .sidebar-content {
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+}

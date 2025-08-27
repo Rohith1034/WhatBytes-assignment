@@ -1,0 +1,33 @@
+.navbar {
+    background-color: #0759a7;
+    padding: 15px;
+    color: white;
+}
+
+.logo {
+    color: white !important;
+    font-size: 28px !important;
+    font-weight: 600 !important;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.search-container {
+    background-color: #0759a7 !important;
+    border: 1px solid white !important;
+    color: white !important;
+}
+
+::placeholder {
+    color: white !important;
+}
+
+.cart-btn {
+    background-color: #002b5a !important;
+    width: 150px !important;
+    padding: 10px !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-right: 20px !important;
+}
