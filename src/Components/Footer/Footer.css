@@ -76,7 +76,6 @@ a {
   margin-top: 10px;
 }
 
-/* 📱 Responsive Footer */
 @media (max-width: 900px) {
   .footer-container {
     flex-direction: column;

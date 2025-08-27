@@ -1,4 +1,3 @@
-// Navbar.jsx
 import React, { useState } from "react";
 import {
   Navbar,
@@ -96,7 +95,7 @@ function AppNavbar() {
               />
             </InputGroup>
 
-            {/* Search Results Dropdown */}
+            
             {results.length > 0 && (
               <ListGroup
                 className="position-absolute shadow-sm mt-1 w-100"

@@ -1,12 +1,89 @@
-# React + Vite
+# 🛒 Modern E-Commerce Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack e-commerce application built with **React**, **Redux Toolkit**, **Redux Persist**, and **React Router**.  
+This app allows users to browse products, filter by categories, view product details, and manage their shopping cart with persistence across sessions.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+🔗 [View Deployed App](DEPLOY_LINK)  
+📹 [Video Demonstration](VIDEO_LINK)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- 🛍️ **Product Listing** – View all products with images, descriptions, and prices.  
+- 📂 **Category Filtering** – Filter products based on category.  
+- 🔎 **Product Details Page** – Get detailed info about each product.  
+- 🛒 **Shopping Cart** – Add, update quantity, and remove items from cart.  
+- 💾 **Persistent Cart** – Cart state is saved using `redux-persist`.  
+- 📱 **Responsive UI** – Clean and modern UI theme (as per design reference).  
+
+---
+
+## 🖼️ Screenshots
+
+### 🏠 Home Page
+![Home Page](/src/assets/dashboard1.png)  
+![Home Page](/src/assets/dashboard2.png)
+
+### 📂 Category Page
+![Category Page](/src/assets/category.png)
+
+### 📄 Product Details Page
+![Product Details](/src/assets/productdetails.png)
+
+### 🛒 Cart Page
+![Cart Page](/src/assets/cart.png)
+
+### 🔎 Search Page
+![Search Page](/src/assets/search.png)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, React Router  
+- **State Management**: Redux Toolkit, Redux Persist  
+- **UI/Styling**: TailwindCSS / Custom CSS  
+- **Build Tool**: Vite / Create React App  
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone this repository:
+
+```bash
+git clone https://github.com/yourusername/ecommerce-app.git
+cd ecommerce-app
+
+
+Install dependencies:
+
+npm install
+
+
+Run the development server:
+
+npm run dev
+
+
+Build for production:
+
+npm run build
+
+📦 Folder Structure
+/src
+ ├── components/      # UI Components
+ ├── pages/           # App Pages (Home, ProductDetails, Cart, etc.)
+ ├── redux/           # Redux slices (cart, products, category)
+ ├── Utils/           # Store configuration
+ ├── App.js           # Main app file
+ └── index.js         # Entry point
+
+🤝 Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you’d like to change.

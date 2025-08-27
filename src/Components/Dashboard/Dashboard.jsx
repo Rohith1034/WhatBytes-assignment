@@ -17,7 +17,7 @@ const Dashboard = () => {
   const [productData, setProductData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
 
-  // ✅ Fetch products
+  
   useEffect(() => {
     if (category.category === "all") {
       dispatch(
@@ -30,17 +30,17 @@ const Dashboard = () => {
       else if (category.category === "clothing") getProductData("mens-shirts");
       else getProductData("home-decoration");
     }
-    setCurrentPage(1); // reset pagination when category changes
+    setCurrentPage(1); 
   }, [dispatch, category]);
 
-  // ✅ Sync productData when Redux data changes
+  
   useEffect(() => {
     if (category.category === "all") {
       setProductData(data?.products || []);
     }
   }, [data, category]);
 
-  // ✅ Filter by price
+  
   useEffect(() => {
     if (!productData) return;
     const filtered = productData
@@ -48,10 +48,9 @@ const Dashboard = () => {
       .sort((a, b) => a.price - b.price);
 
     setFilteredData(filtered);
-    setCurrentPage(1); // reset pagination when price changes
+    setCurrentPage(1); 
   }, [price, productData]);
 
-  // ✅ Pagination based on filteredData
   const totalPages = Math.ceil(filteredData.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const paginatedData = filteredData.slice(startIndex, startIndex + itemsPerPage);
@@ -92,7 +91,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* ✅ Pagination */}
+      
       {!loading && totalPages > 1 && (
         <div className="pagination-container">
           <button

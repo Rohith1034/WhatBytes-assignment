@@ -2,17 +2,25 @@ import React, { useState } from "react";
 import "./ProductDetails.css";
 import { useLocation } from "react-router-dom";
 import { Star, ShoppingCart } from "lucide-react";
-
+import { toast } from "react-toastify";
+import { addItem } from "../../Utils/cartSlice";
+import { useDispatch } from "react-redux";
 const ProductDetails = () => {
   const location = useLocation();
   const { product } = location.state || {};
   const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (e) => {
+    e.stopPropagation();
+    dispatch(addItem(product));
+    toast.success("Add to cart successfull");
+  };
 
   if (!product) return <p>Loading product...</p>;
 
   return (
     <div className="product-details-container">
-      {/* Left: Image Section */}
       <div className="image-section">
         <div className="main-image">
           <img src={product.images[0]} alt={product.title} />
@@ -24,14 +32,16 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      {/* Right: Details Section */}
       <div className="details-section">
         <h1 className="product-title">{product.title}</h1>
 
         <div className="price-section">
           <span className="current-price">${product.price}</span>
           <span className="old-price">
-            ${(product.price / (1 - product.discountPercentage / 100)).toFixed(2)}
+            $
+            {(product.price / (1 - product.discountPercentage / 100)).toFixed(
+              2
+            )}
           </span>
           <span className="discount">-{product.discountPercentage}%</span>
         </div>
@@ -40,7 +50,9 @@ const ProductDetails = () => {
           {Array.from({ length: 5 }, (_, i) => (
             <Star
               key={i}
-              className={i < Math.round(product.rating) ? "star filled" : "star"}
+              className={
+                i < Math.round(product.rating) ? "star filled" : "star"
+              }
             />
           ))}
           <span>{product.rating.toFixed(1)} / 5</span>
@@ -49,8 +61,12 @@ const ProductDetails = () => {
         <p className="description">{product.description}</p>
 
         <div className="meta">
-          <p><b>Category:</b> {product.category}</p>
-          <p><b>Brand:</b> {product.brand}</p>
+          <p>
+            <b>Category:</b> {product.category}
+          </p>
+          <p>
+            <b>Brand:</b> {product.brand}
+          </p>
         </div>
 
         <div className="quantity">
@@ -63,7 +79,7 @@ const ProductDetails = () => {
           />
         </div>
 
-        <button className="add-to-cart">
+        <button className="add-to-cart" onClick={handleAddToCart}>
           <ShoppingCart size={20} /> Add to Cart
         </button>
 

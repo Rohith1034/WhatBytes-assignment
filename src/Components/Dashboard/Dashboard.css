@@ -4,7 +4,6 @@
   flex-direction: row;
 }
 
-/* Products section */
 .products-section {
   display: flex;
   flex: 7;
@@ -52,9 +51,7 @@
   font-weight: bold;
 }
 
-/* 🔥 Responsive Fixes */
 @media (max-width: 950px) {
-  /* Tablets */
   .dashboard-container {
     flex-direction: column;
   }

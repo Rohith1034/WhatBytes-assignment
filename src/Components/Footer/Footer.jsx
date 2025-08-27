@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div id="footer">
       <div className="footer-container">
-        {/* Filters */}
+        
         <div className="footer-rows">
           <h2>Filters</h2>
           <div className="footer-horizantal-row">
@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* About Us */}
+        
         <div className="footer-rows">
           <h2>About Us</h2>
           <div className="footer-vertical-row">
@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Social Media */}
+        
         <div className="footer-rows">
           <h2>Follow Us</h2>
           <div className="footer-horizantal-row social-media-container">
@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Download App */}
+        
         <div className="footer-rows">
           <h2>Download Our App</h2>
           <div className="download-apps">
@@ -65,7 +65,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Line */}
+      
       <hr className="line-breaker" />
       <p className="copy-rights">© 2024 American</p>
     </div>
