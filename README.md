@@ -7,8 +7,8 @@ This app allows users to browse products, filter by categories, view product det
 
 ## 🚀 Live Demo
 
-🔗 [View Deployed App](DEPLOY_LINK)  
-📹 [Video Demonstration](VIDEO_LINK)
+🔗 [View Deployed App](https://what-bytes-assignment-nine.vercel.app/)  
+📹 [Video Demonstration](https://drive.google.com/file/d/1yfbt5L11b11gIOL7Fp44BsSfjrZ3lGms/view?usp=sharing)
 
 ---
 
@@ -19,7 +19,17 @@ This app allows users to browse products, filter by categories, view product det
 - 🔎 **Product Details Page** – Get detailed info about each product.  
 - 🛒 **Shopping Cart** – Add, update quantity, and remove items from cart.  
 - 💾 **Persistent Cart** – Cart state is saved using `redux-persist`.  
-- 📱 **Responsive UI** – Clean and modern UI theme (as per design reference).  
+- 📱 **Responsive UI** – Clean and modern UI theme (as per design reference).
+
+## 📌 About Pagination  
+
+Pagination is implemented in the **Product Listing Page** to improve performance and user experience.  
+- The app only loads a subset of products per page.  
+- Pagination updates dynamically when:
+  - The **price filter** changes.  
+  - The **category filter** changes.  
+  - Sorting options are updated.  
+- This ensures the user always sees accurate results without reloading the entire dataset. 
 
 ---
 
