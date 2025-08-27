@@ -1,0 +1,12 @@
+.cart-item {
+  border-radius: 12px;
+}
+
+.summary-card {
+  border-radius: 12px;
+  background: #f9fbff;
+}
+
+button {
+  border-radius: 8px !important;
+}
